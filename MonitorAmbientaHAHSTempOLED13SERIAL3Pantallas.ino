@@ -109,31 +109,31 @@ void logo() {
 void temperatura(){
   Serial.write("Temperature");
   Serial.println();
-  u8g.setFont(u8g_font_profont17r);        // select font
+  u8g.setFont(u8g_font_profont17r);        // seleccionar fuente
   u8g.drawStr(18, 12, "Temp C"); 
   u8g.setPrintPos(33,40);
-  u8g.drawRFrame(15, 20, 100, 30, 10);     // draws frame with rounded edges
-  u8g.println(dht.readTemperature());                        //Prints the voltage
+  u8g.drawRFrame(15, 20, 100, 30, 10);     // dibuja un cuadro con bordes redondeados
+  u8g.println(dht.readTemperature());                        //Imprime el voltaje
   u8g.println("ºC");
   return 0;
 }
 void humedadaire() {
   Serial.write("Humidity");
   Serial.println();
-  u8g.setFont(u8g_font_profont17r);        // select font
+  u8g.setFont(u8g_font_profont17r);        // Selecciona fuente
   u8g.drawStr(18, 12, "H aire"); 
   u8g.setPrintPos(33,40);
-  u8g.drawRFrame(15, 20, 100, 30, 10);     // draws frame with rounded edges
-  u8g.println(dht.readHumidity());                        //Prints the voltage
+  u8g.drawRFrame(15, 20, 100, 30, 10);     // Dibuja cuadrado con bordes redondeados
+  u8g.println(dht.readHumidity());                        //Imprime voltaje
   u8g.println("%");
   return 0;
 }
 void humedadsuelo(){
-  u8g.setFont(u8g_font_profont17r);        // select font
+  u8g.setFont(u8g_font_profont17r);        // Selecciona fuente
   u8g.drawStr(18, 12, "H suelo"); 
   u8g.setPrintPos(33,40);
-  u8g.drawRFrame(15, 20, 100, 30, 10);     // draws frame with rounded edges
-  u8g.println(analogRead(0));                        //Prints the voltage
+  u8g.drawRFrame(15, 20, 100, 30, 10);     // Dibuja cuadrado con bordes redondeadas
+  u8g.println(analogRead(0));                        //Imprime voltaje
   u8g.println("%");
   return 0;
   }
